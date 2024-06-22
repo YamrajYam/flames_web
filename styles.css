@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arvo', serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    transition: background-image 1s ease;
+    color: #0D1B1E;
+    background-color: #C2CAE8; /* Default background color */
+    background-image: url('fire.png'); /* Small image for floating effect */
+    background-size: 40px 40px; /* Adjust size for multiple instances */
+    background-repeat: repeat; /* Repeat the background image */
+    animation: floatBackground 8s infinite;
+
+
+  }
+
+
+@keyframes floatBackground {
+  0% { background-position: 0 0; }
+  50% { background-position: 50px; }
+  100% { background-position: 0 0; }
+}
+  
+  .container {
+    text-align: center;
+  }
+  
+  .form-container {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    padding: 43px;
+    border: 2px solid white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-left: 30px;
+    background-color: #e9ebf1;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .form-group input {
+    padding: 8px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  #result {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  
+  /* Background images for each FLAMES letter */
+  .bg-f { background-image: url('f.png'); }
+  .bg-l { background-image: url('l.png'); }
+  .bg-a { background-image: url('a.png'); }
+  .bg-m { background-image: url('m.png'); }
+  .bg-e { background-image: url('e.png'); }
+  .bg-s { background-image: url('s.png'); }
+  
+  body.bg-f, body.bg-l, body.bg-a, body.bg-m, body.bg-e, body.bg-s {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Animated button styles */
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Arvo', serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #FF6B6B, #FFD93D, #6BCB77, #4D96FF);
+    background-size: 300% 300%;
+    color: white;
+    transition: background-position 0.5s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-position: 100% 0;
+    transform: scale(1.05);
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
